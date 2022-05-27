@@ -24,7 +24,7 @@ httpx -l $domain/subdomain/RawSub.txt -o $domain/subdomain/ProbedSub.txt;
 
 echo "Historic data gathering started....................";
 
-gau -subs --o $domain/historic_data.txt *.$domain;
+gau -subs --o $domain/historic_data.txt $domain;
 echo "Starting Aquatone";
 mkdir -p $domain/Aquatone ;
 cat $domain/subdomain/ProbedSub.txt | aquatone ;
